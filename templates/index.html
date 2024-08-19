@@ -54,22 +54,22 @@
 					</div>
 					<ul class="slimmenu">
 						<li> 
-							<a class="scroll" href="#home">home</a>
+							<a class="scroll" href="#дом">дом</a>
 						</li>
 						<li>
-							<a class="scroll" href="#about">about</a>
+							<a class="scroll" href="#о">о</a>
 						</li>
 						<li>
-							<a class="scroll" href="#work">work</a>
+							<a class="scroll" href="#работа">работа</a>
 						</li>
 						<li> 
-							<a class="scroll" href="#services">services</a>
+							<a class="scroll" href="#услуги">услуги</a>
 						</li>
 						<li> 
-							<a class="scroll" href="#blog">jurnal</a>
+							<a class="scroll" href="#блог">журнал</a>
 						</li>
 						<li>
-							<a class="scroll" href="#contact">contact</a>
+							<a class="scroll" href="#contact">контакты</a>
 						</li>
 					</ul>
 				</div>
@@ -78,8 +78,8 @@
 
 			<div id="home">	
 				<div class="just_pattern"></div>
-				<div class="parallax-home" style="background-image: url({{ image_id.photo.url }});"></div>	
-				<div class="small-text"><div class="cl-effect-5"><a class="scroll" href="#work"><span data-hover="portfolio">portfolio</span></a> <a class="scroll" href="#contact"><span data-hover="contact">contact</span></a></div></div>
+				<div class="parallax-home" style="background-image: url({{image_id.photo.url}});"></div>	
+				<div class="small-text"><div class="cl-effect-5"><a class="scroll" href="#work"><span data-hover="portfolio">портфолио</span></a> <a class="scroll" href="#contact"><span data-hover="contact">контакты</span></a></div></div>
 				<div class="social-top">
 					<ul class="list-social">
 						<li class="icon-soc tipped" data-title="twitter"  data-tipper-options='{"direction":"top","follow":"true"}'>
@@ -98,9 +98,9 @@
 				</div>	
 				<div class="big-text">
 					<ul class="flippy">
-						<li><span>{{index.title}}</span></li>
-						<li><span>BORN INTO CREATIVITY</span></li>
-						<li><span>FOCUSED ON STRATEGY</span></li>
+						{% for index_all in index %}
+						<li><span>{{index_all.title}}</span></li>
+						{% endfor %}
 					</ul>
 				</div>								
 				<a class="scroll" href="#about"><div class="scroll-btn tipped" data-title="about agency"  data-tipper-options='{"direction":"top","follow":"true"}'></div></a>
@@ -160,108 +160,38 @@
 					<div class="sixteen columns" data-scrollreveal="enter top and move 150px over 1s">
 						<div class="header-text">
 							<div class="header-shadow-text">the team</div>
-							<h1>the team</h1>
-							<p>WE'RE A SMALL, FRIENDLY AND TALENTED TEAM. WE CRAFT BEAUTIFUL DIGITAL SOLUTIONS FOR AWESOME CLIENTS ACROSS ALL THE PLATFORMS.</p>
+							<h1>{{team.title}}</h1>
+							<p>{{team.description}}</p>
 						</div>
 					</div>
 				</div>
 				<div class="container">	
+					{%for i in jobs%}
 					<div class="four columns" data-scrollreveal="enter left and move 150px over 1s">
 						<div class="team-wrap">	
-							<img src="images/team1.jpg" alt=""/>
-							<h5>JAMES BEAN</h5>
-							<p>Creative Director</p>
+							<img src="{{ i.image.url }}" alt=""/>
+							<h5>{{i.title}}</h5>
+							<p>{{i.description}}</p>
 							<div class="team-line"></div>
 							<div class="social-team">
 								<ul class="team-social">
 									<li class="icon-team tipped" data-title="twitter"  data-tipper-options='{"direction":"top","follow":"true"}'>
-										<a href="#">&#xf099;</a>
+										<a href="https://www.instagram.com/accounts/login/?next=%2Fomdop%2Ffeed%2F&source=profile_feed_tab&locale=ru">&#xf099;</a>
 									</li>
 									<li class="icon-team tipped" data-title="facebook"  data-tipper-options='{"direction":"top","follow":"true"}'>
-										<a href="#">&#xf09a;</a>
+										<a href="https://www.instagram.com/accounts/login/?next=%2Fomdop%2Ffeed%2F&source=profile_feed_tab&locale=ru">&#xf09a;</a>
 									</li>
 									<li class="icon-team tipped" data-title="github"  data-tipper-options='{"direction":"top","follow":"true"}'>
-										<a href="#">&#xf09b;</a>
+										<a href="https://www.instagram.com/accounts/login/?next=%2Fomdop%2Ffeed%2F&source=profile_feed_tab&locale=ru">&#xf09b;</a>
 									</li>
 									<li class="icon-team tipped" data-title="google +"  data-tipper-options='{"direction":"top","follow":"true"}'>
-										<a href="#">&#xf0d5;</a>
+										<a href="https://www.instagram.com/accounts/login/?next=%2Fomdop%2Ffeed%2F&source=profile_feed_tab&locale=ru">&#xf0d5;</a>
 									</li>
 								</ul>	
 							</div>								
 						</div>
 					</div>	
-					<div class="four columns" data-scrollreveal="enter left and move 150px over 1s">	
-						<div class="team-wrap">	
-							<img src="images/team2.jpg" alt=""/>
-							<h5>ISABELLA MORO</h5>
-							<p>Chief Executive Officer</p>
-							<div class="team-line"></div>
-							<div class="social-team">
-								<ul class="team-social">
-									<li class="icon-team tipped" data-title="twitter"  data-tipper-options='{"direction":"top","follow":"true"}'>
-										<a href="#">&#xf099;</a>
-									</li>
-									<li class="icon-team tipped" data-title="facebook"  data-tipper-options='{"direction":"top","follow":"true"}'>
-										<a href="#">&#xf09a;</a>
-									</li>
-									<li class="icon-team tipped" data-title="github"  data-tipper-options='{"direction":"top","follow":"true"}'>
-										<a href="#">&#xf09b;</a>
-									</li>
-									<li class="icon-team tipped" data-title="google +"  data-tipper-options='{"direction":"top","follow":"true"}'>
-										<a href="#">&#xf0d5;</a>
-									</li>
-								</ul>	
-							</div>
-						</div>
-					</div>	
-					<div class="four columns" data-scrollreveal="enter right and move 150px over 1s">	
-						<div class="team-wrap">	
-							<img src="images/team3.jpg" alt=""/>
-							<h5>DAVID IVE</h5>
-							<p>General Manager</p>
-							<div class="team-line"></div>
-							<div class="social-team">
-								<ul class="team-social">
-									<li class="icon-team tipped" data-title="twitter"  data-tipper-options='{"direction":"top","follow":"true"}'>
-										<a href="#">&#xf099;</a>
-									</li>
-									<li class="icon-team tipped" data-title="facebook"  data-tipper-options='{"direction":"top","follow":"true"}'>
-										<a href="#">&#xf09a;</a>
-									</li>
-									<li class="icon-team tipped" data-title="github"  data-tipper-options='{"direction":"top","follow":"true"}'>
-										<a href="#">&#xf09b;</a>
-									</li>
-									<li class="icon-team tipped" data-title="google +"  data-tipper-options='{"direction":"top","follow":"true"}'>
-										<a href="#">&#xf0d5;</a>
-									</li>
-								</ul>	
-							</div>
-						</div>
-					</div>	
-					<div class="four columns" data-scrollreveal="enter right and move 150px over 1s">	
-						<div class="team-wrap">	
-							<img src="images/team4.jpg" alt=""/>
-							<h5>JAMES MORO</h5>
-							<p>HR Manager</p>
-							<div class="team-line"></div>
-							<div class="social-team">
-								<ul class="team-social">
-									<li class="icon-team tipped" data-title="twitter"  data-tipper-options='{"direction":"top","follow":"true"}'>
-										<a href="#">&#xf099;</a>
-									</li>
-									<li class="icon-team tipped" data-title="facebook"  data-tipper-options='{"direction":"top","follow":"true"}'>
-										<a href="#">&#xf09a;</a>
-									</li>
-									<li class="icon-team tipped" data-title="github"  data-tipper-options='{"direction":"top","follow":"true"}'>
-										<a href="#">&#xf09b;</a>
-									</li>
-									<li class="icon-team tipped" data-title="google +"  data-tipper-options='{"direction":"top","follow":"true"}'>
-										<a href="#">&#xf0d5;</a>
-									</li>
-								</ul>	
-							</div>
-						</div>
-					</div>
+					{%endfor%}
 				</div>		
 			</div>			
 			
@@ -269,80 +199,74 @@
 			<div id="sep1">	
 				<div class="just_pattern"></div>
 				<div class="parallax"></div>
+				
 						<div class="slideshow" id="slideshow">
 							<ol class="slides">
+							
 								<li class="current">
+									
 									<div class="description">
-										<h4>Tilted Content Slideshow</h4>
-										<p>This slider plays with 3D perspective and performs some interesting animations on the right-hand side images.</p>
-									</div>
-									<div class="tiltview col">
-										<a href="#"><img src="images/1_screen.jpg" alt=""/></a>
-										<a href="#"><img src="images/2_screen.jpg" alt=""/></a>
-									</div>
-								</li>
-								<li>
-									<div class="description">
-										<h4>CSS Animations</h4>
-										<p>We are using 12 different animations for showing and hiding the items of a slide. The animations are defined by randomly adding data-attributes called <code>data-effect-in</code> and <code>data-effect-out</code> for every slide. </p>
+										<h4>{{create.title}}</h4>
+										<p>{{create.description}}</p>
 									</div>
 									<div class="tiltview row">
-										<a href="#"><img src="images/3_mobile.jpg" alt=""/></a>
-										<a href="#"><img src="images/4_mobile.jpg" alt=""/></a>
+										<a href=""><img src="{{ create.image.url }}" alt=""/></a>
+										<a href=""><img src="{{ create.image.url }}" alt=""/></a>
 									</div>
 								</li>
 								<li>
 									<div class="description">
-										<h4>Tilted Items</h4>
-										<p>The perspective view is achieved by adding a perspective value to the slide list item and tilting a division that contains the two screenshots.</p>
+										<h4>{{titled.title}}</h4>
+										<p>{{titiled.description}}</p>
 									</div>
 									<div class="tiltview col">
-										<a href="#"><img src="images/5_screen.jpg" alt=""/></a>
-										<a href="#"><img src="images/6_screen.jpg" alt=""/></a>
+										<a href=""><img src="{{ titled.image.url }}" alt=""/></a>
+										<a href=""><img src="{{ titled.image.url }}"alt=""/></a>
 									</div>
 								</li>
 								<li>
 									<div class="description">
-										<h4>Column or Row</h4>
-										<p>The items in the tilted container are either laid out in a column or in a row. For some directions we need to adjust the animation delays for the items, since we don't want the items to overlap each other when they move in or out.</p>
+										<h4>{{column.title}}</h4>
+										<p>{{column.description}}</p>
 									</div>
 									<div class="tiltview row">
-										<a href="#"><img src="images/1_mobile.jpg" alt=""/></a>
-										<a href="#"><img src="images/2_mobile.jpg" alt=""/></a>
+										<a href=""><img src="{{ column.image.url }}"alt=""/></a>
+										<a href=""><img src="{{ column.image.url }}" alt=""/></a>
 									</div>
 								</li>
 								<li>
 									<div class="description">
-										<h4>Responsiveness</h4>
-										<p>For smaller screens, the items on the right hand side will become less opaque and serve as decoration only. The focus will be on the description which will occupy all the width.</p>
+										<h4>{{response.title}}</h4>
+										<p>{{response.description}}</p>
 									</div>
 									<div class="tiltview col">
-										<a href="#"><img src="images/3_screen.jpg" alt=""/></a>
-										<a href="#"><img src="images/4_screen.jpg" alt=""/></a>
+										<a href="#"><img src="{{ response.image.url }}"alt=""/></a>
+										<a href="#"><img src="{{ response.image.url }}" alt=""/></a>
 									</div>
 								</li>
 								<li>
 									<div class="description">
-										<h4>Navigation</h4>
-										<p>For the "line" navigation we use a little trick to make the clickable area a bit bigger: we add a thick white border to the top and bottom of the span. Since the border is part of the element, it will be part of the clickable zone.</p>
+										<h4>{{navigation.title}}</h4>
+										<p>{{navigation.description}}</p>
 									</div>
 									<div class="tiltview row">
-										<a href="#"><img src="images/5_mobile.jpg" alt=""/></a>
-										<a href="#"><img src="images/6_mobile.jpg" alt=""/></a>
+										<a href="#"><img src="{{ navigation.image.url }}"  alt=""/></a>
+										<a href="#"><img src="{{ navigation.image.url }}"  alt=""/></a>
 									</div>
+								
 								</li>
+								
 							</ol>
 						</div><!-- /slideshow -->		
 			</div>			
-			
-			
+	
 			<div id="work">	
 				<div class="container">
 					<div class="sixteen columns" data-scrollreveal="enter top and move 150px over 1s">
 						<div class="header-text">
 							<div class="header-shadow-text">work</div>
-							<h1>work</h1>
-							<p>WE BELIEVE OUR WORK SPEAKS FOR ITSELF. BROWSE OUR MOST RECENT PROJECTS BELOW.</p>
+							<h1>{{work.title}}</h1>
+							<p>{{work.description}}</p>
 						</div>
 					</div>
 				</div>
@@ -364,11 +288,11 @@
 					<div class="sixteen columns">
 						<div id="portfolio-filter">
 							<ul id="filter">
-								<li><a href="#" class="current" data-filter="*" title="">Show all</a></li>
-								<li><a href="#" data-filter=".photography" title="">photography</a></li>
-								<li><a href="#" data-filter=".illustration1" title="">illustration</a></li>
-								<li><a href="#" data-filter=".motion-graphics" title="">motion graphics</a></li>
-								<li><a href="#" data-filter=".web-design" title="">web design</a></li>
+								<li><a href="#" class="current" data-filter="*" title="">покажи все</a></li>
+								<li><a href="#" data-filter=".photography" title="">фотография</a></li>
+								<li><a href="#" data-filter=".illustration1" title="">иллюстрация</a></li>
+								<li><a href="#" data-filter=".motion-graphics" title="">графика</a></li>
+								<li><a href="#" data-filter=".web-design" title="">веб дизайн</a></li>
 							</ul>
 						</div>
 					</div>
@@ -459,8 +383,8 @@
 				<div id="link-work">	
 					<div class="container">
 						<div class="sixteen columns" data-scrollreveal="enter top and move 150px over 1s">
-							<h6>ready to start conversation?</h6>
-							<div class="cl-effect-5"><a class="scroll" href="#contact"><span data-hover="contact us">get in touch</span></a></div>
+							<h6>{{conversation.title}}</h6>
+							<div class="cl-effect-5"><a class="scroll" href="#контакты"><span data-hover="свяжитесь с нами">контакты</span></a></div>
 						</div>
 					</div>		
 				</div>	
@@ -471,29 +395,14 @@
 				<div class="just_pattern"></div>
 				<div class="parallax2"></div>	
 				<div class="container z-index">
+					{% for i in clients %}
 					<div class="four columns">
 						<div class="facts-wrap">
-							<div class="facts-wrap-num"><span class="counter">87</span></div>
-							<h5>Clients</h5> 
+							<div class="facts-wrap-num"><span class="counter">{{i.title}}</span></div>
+							<h5>{{i.description}}<h5> 
 						</div>
 					</div>
-					<div class="four columns">
-						<div class="facts-wrap">
-							<div class="facts-wrap-num"><span class="counter">25</span></div>
-							<h5>Awards</h5> 
-						</div>
-					</div>
-					<div class="four columns">
-						<div class="facts-wrap">
-							<div class="facts-wrap-num"><span class="counter">68</span></div>
-							<h5>Projects</h5> 
-						</div>
-					</div>
-					<div class="four columns">
-						<div class="facts-wrap">
-							<div class="facts-wrap-num"><span class="counter">46</span></div>
-							<h5>Mails</h5> 
-						</div>
+					{% endfor %}
 					</div>
 				</div>						
 			</div>
@@ -507,54 +416,20 @@
 					<div class="sixteen columns" data-scrollreveal="enter top and move 150px over 1s">
 						<div class="header-text">
 							<div class="header-shadow-text">services</div>
-							<h1>services</h1>
-							<p>JUST CHECK OUT ALL OF THE SERVICE LISTS BELOW TO GET A GENERAL IDEA OF WHAT WE ARE CAPABLE OF DELIVERING.</p>
+							<h1>{{services.title}}</h1>
+							<p>{{services.description}}</p>
 						</div>
 					</div>
 				</div>
+				{%for i in design %}
 				<div class="container">
 					<div class="one-third column" data-scrollreveal="enter left and move 150px over 1s">
-						<div class="services-offer">
+						<div class="services-offer">	
 							<span class="svg-icon flat-filled" id="filled-brush"></span>
-							<h5>Creative design</h5>
-							<p>Cum sociis natoque penatibus et magnis dis massa.</p>
+							<h5>{{i.title}}</h5>
+							<p>{{i.description}}</p>
 						</div>
-					</div>
-					<div class="one-third column" data-scrollreveal="enter bottom and move 150px over 1s">
-						<div class="services-offer">
-							<span class="svg-icon flat-filled" id="filled-phone"></span>
-							<h5>Responsive design</h5>
-							<p>Cum sociis natoque penatibus et magnis dis massa.</p>
-						</div>
-					</div>
-					<div class="one-third column" data-scrollreveal="enter right and move 150px over 1s">
-						<div class="services-offer">
-							<span class="svg-icon flat-filled" id="filled-message"></span>
-							<h5>Excellent Support</h5>
-							<p>Cum sociis natoque penatibus et magnis dis massa.</p>
-						</div>
-					</div>
-					<div class="clear"></div>
-					<div class="one-third column" data-scrollreveal="enter left and move 150px over 1s">
-						<div class="services-offer">
-							<span class="svg-icon flat-filled" id="filled-clock"></span>
-							<h5>quick support</h5>
-							<p>Cum sociis natoque penatibus et magnis dis massa.</p>
-						</div>
-					</div>
-					<div class="one-third column" data-scrollreveal="enter bottom and move 150px over 1s">
-						<div class="services-offer">
-							<span class="svg-icon flat-filled" id="filled-email"></span>
-							<h5>Contact form</h5>
-							<p>Cum sociis natoque penatibus et magnis dis massa.</p>
-						</div>
-					</div>
-					<div class="one-third column" data-scrollreveal="enter right and move 150px over 1s">
-						<div class="services-offer">
-							<span class="svg-icon flat-filled" id="filled-heart"></span>
-							<h5>Made with love</h5>
-							<p>Cum sociis natoque penatibus et magnis dis massa.</p>
-						</div>
+					{% endfor%}
 					</div>
 				</div>			
 			</div>
@@ -564,45 +439,25 @@
 					<div class="sixteen columns" data-scrollreveal="enter top and move 150px over 1s">
 						<div class="header-text">
 							<div class="header-shadow-text">our plans</div>
-							<h1>our plans</h1>
-							<p>YOU CAN CONFIGURE YOUR PRICING TABLE USING THE GRID SYSTEM IN ORDER TO MAKE IT RESPONSIVE FOR SMALL DEVICES.</p>
+							<h1>{{plans.title}}</h1>
+							<p>{{plans.description}}</p>
 						</div>
 					</div>
 				</div>
 				<div class="container">
+					{% for standart in standart %}
 					<div class="one-third column" data-scrollreveal="enter left and move 150px over 1s">
 						<div class="plans-offer">
-							<h3>$9.99<span> – month</span></h3>
-							<h6>Standard</h6>
-							<p><strong>24/7</strong> TECH SUPPORT</p>
-							<p><strong>15</strong> PROJECTS</p>
-							<p><strong>5GB</strong> STORAGE</p>
-							<p>UNLIMITED USERS</p>
-							<div class="cl-effect-5"><a href="#"><span data-hover="sing up">sing up</span></a></div>
+							<h3>{{standart.title}}<span> – month</span></h3>
+							<h6>{{standart.title}}</h6>
+							<p><strong>{{standart.description}}</p>
+							<p><strong>{{standart.description}}</p>
+							<p><strong>{{standart.description}}</p>
+							<p>{{standart.description}}</p>
+							<div class="cl-effect-5"><a href="#"><span data-hover="или не надо">подпишитесь</span></a></div>
 						</div>
-					</div>
-					<div class="one-third column" data-scrollreveal="enter bottom and move 150px over 1s">
-						<div class="plans-offer-gold">
-							<h3>$17.99<span> – month</span></h3>
-							<h6>Gold</h6>
-							<p><strong>24/7</strong> TECH SUPPORT</p>
-							<p><strong>25</strong> PROJECTS</p>
-							<p><strong>15GB</strong> STORAGE</p>
-							<p>UNLIMITED USERS</p>
-							<div class="cl-effect-5"><a href="#"><span data-hover="sing up">sing up</span></a></div>
-						</div>
-					</div>
-					<div class="one-third column" data-scrollreveal="enter right and move 150px over 1s">
-						<div class="plans-offer">
-							<h3>$34.99<span> – month</span></h3>
-							<h6>Premium</h6>
-							<p><strong>24/7</strong> TECH SUPPORT</p>
-							<p><strong>100</strong> PROJECTS</p>
-							<p><strong>50GB</strong> STORAGE</p>
-							<p>UNLIMITED USERS</p>
-							<div class="cl-effect-5"><a href="#"><span data-hover="sing up">sing up</span></a></div>
-						</div>
-					</div>
+						{% endfor %}
+					
 				</div>	
 			</div>
 
@@ -637,28 +492,16 @@
 				<div class="parallax1"></div>
 				<div class="container z-index">	
 					<div class="one-third column">
+						{% for aruuke in blog %}
 						<div class="blog-post">
-							<img  src="images/blog/1.jpg" alt="" />
-							<h5>Blog post</h5>
-							<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Praesent commodo arcu massa.</p>
+							<img  src="{{ aruuke.image.url }}" alt="" />
+							<h5>{{aruuke.title}}</h5>
+							<p>{{aruuke.description}}</p>
 							<p><span>26.2.2014.</span><span> 3 comments</span></p>
 						</div>
 					</div>	
-					<div class="one-third column">
-						<div class="blog-post">
-							<img  src="images/blog/2.jpg" alt="" />
-							<h5>Blog post</h5>
-							<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Praesent commodo arcu massa.</p>
-							<p><span>17.2.2014.</span><span> 7 comments</span></p>
-						</div>
-					</div>	
-					<div class="one-third column">
-						<div class="blog-post">
-							<img  src="images/blog/3.jpg" alt="" />
-							<h5>Blog post</h5>
-							<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Praesent commodo arcu massa.</p>
-							<p><span>12.2.2014.</span><span> 4 comments</span></p>
-						</div>
+					{% endfor %}
+					
 					</div>
 				</div>		
 			</div>			
@@ -672,33 +515,33 @@
 				<div class="container">
 					<div class="sixteen columns" data-scrollreveal="enter top and move 150px over 1s">
 						<div class="header-text">
-							<div class="header-shadow-text">contact</div>
-							<h1>contact</h1>
-							<p>We create best opportunities for your business.</p>
+							<div class="header-shadow-text">контакты</div>
+							<h1>{{theend.title}}</h1>
+							<p>{{theend.description}}</p>
 						</div>
 					</div>
 				</div>
 				<div class="container">	
 					<form name="ajax-form" id="ajax-form" action="mail-it.php" method="post">
 						<div class="four columns">
-							<label for="name">Your Name: * 
+							<label for="name">ваше имя: * 
 								<span class="error" id="err-name">please enter name</span>
 							</label>
 							<input name="name" id="name" type="text" />
 						</div>
 						<div class="four columns">
-							<label for="email">E-Mail: * 
-								<span class="error" id="err-email">please enter e-mail</span>
+							<label for="почта">почта: * 
+								<span class="error" id="err-email">пожалуйста введите свою почту</span>
 								<span class="error" id="err-emailvld">e-mail is not a valid format</span>
 							</label>
 							<input name="email" id="email" type="text" />
 						</div>
 						<div class="five columns">
-							<label for="message">Tell Us Everything:</label>
+							<label for="message">Расскажите о себе:</label>
 							<textarea name="message" id="message"></textarea>
 						</div>
 						<div class="three columns">
-							<div id="button-con"><button class="send_message" id="send">Submit</button></div>
+							<div id="button-con"><button class="send_message" id="send">прикрепить</button></div>
 						</div>
 						<div class="clear"></div>	
 						<div class="error text-align-center" id="err-form">There was a problem validating the form please check!</div>
@@ -710,16 +553,16 @@
 					<div class="clear"></div>
 					<div class="eight columns" data-scrollreveal="enter left and move 150px over 1s">
 						<div class="contact-wrap">
-							<p><i class="icon-contact1">&#xf095;</i><span>call us:</span> (381) 267-6386 <small><em>Monday–Friday | 9am–5pm (GMT +1)</em></small></p>
+							<p><i class="icon-contact1">&#xf095;</i><span>позвоните нам :</span> (381) 267-6386 <small><em>Monday–Friday | 9am–5pm (GMT +1)</em></small></p>
 						</div>
 					</div>
 					<div class="eight columns" data-scrollreveal="enter right and move 150px over 1s">	
 						<div class="contact-wrap">
-							<p><i class="icon-contact1">&#xf041;</i><span>Visit Us:</span> First Street, Sunrise Avenue, New York, USA</p>	
+							<p><i class="icon-contact1">&#xf041;</i><span>Приходите к нам :</span> First Street, Sunrise Avenue, New York, USA</p>	
 						</div>
 					</div>	
 					<div class="sixteen columns" data-scrollreveal="enter bottom and move 150px over 1s">	
-						<a class="button-map close-map"><span>Locate Us on Map</span></a>
+						<a class="button-map close-map"><span>найдите нас по карте</span></a>
 					</div>
 				</div>
 				<div id="google_map"></div>				
@@ -732,8 +575,8 @@
 				<a class="scroll" href="#home"><div class="back-top">&#xf102;</div></a>	
 				<div class="container">
 					<div class="sixteen columns">
-						<p>Made with<i class="icon-footer">&#xf004;</i>and<i class="icon-footer">&#xf0f4;</i>in serbia</p>
-						<p><small>Template: Ananke by ig design</small></p>
+						<p>сделано с <i class="icon-footer">&#xf004;</i> и <i class="icon-footer">&#xf0f4;</i>в шанхае</p>
+						<p><small>сделано с специальными дизайнами</small></p>
 					</div>
 				</div>	
 			</div>
